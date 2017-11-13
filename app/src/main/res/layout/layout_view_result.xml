@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+               >
+    <TextView
+            android:id="@+id/text_Firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:hint="F.Name"
+            android:maxLines="1" >
+    </TextView>
+
+    <TextView
+            android:id="@+id/text_Lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/text_Firstname"
+            android:hint="L.Name"
+            android:maxLines="1" />
+    <TextView
+            android:id="@+id/text_Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/text_Lastname"
+            android:hint="Address"
+            android:maxLines="1" />
+    <TextView
+            android:id="@+id/text_Age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/text_Address"
+            android:hint="Age"
+            android:maxLines="1" />
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/ok"
+            android:layout_below="@id/text_Age"
+            android:text="Ok"/>
+
+
+
+
+
+</RelativeLayout>

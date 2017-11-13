@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.anuj.studentrecord.main.MainActivity">
+
+    <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/tabHost"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent">
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"></TabWidget>
+            <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="80dp">
+                <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Insert Data below"/>
+                    <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="FirstName"
+                            android:id="@+id/edit_Firstname"/>
+                    <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="LastName"
+                            android:id="@+id/edit_Lastname"/>
+                    <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Age"
+                            android:id="@+id/edit_Age"
+                            android:inputType="number"/>
+                    <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edit_Address"
+                            android:hint="Address"/>
+                    <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Insert"
+                            android:id="@+id/button_Insert"
+                            android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+                <RelativeLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <EditText
+                            android:id="@+id/searchBar"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:hint="Search By Name"
+                            android:maxLines="1">
+
+                        <requestFocus />
+                    </EditText>
+                    <TextView
+                            android:id="@+id/textViewRecordCount"
+                            android:gravity="center"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0 records found"
+                            android:layout_below="@id/searchBar"
+                            android:padding="1dp" />
+
+                    <ScrollView
+                            android:id="@+id/scrollRecords"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewRecordCount" >
+
+                        <LinearLayout
+                                android:id="@+id/linearRecords"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </TabHost>
+</android.support.constraint.ConstraintLayout>
